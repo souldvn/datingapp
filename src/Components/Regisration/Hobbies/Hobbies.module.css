@@ -1,0 +1,43 @@
+.container {
+  padding: 0 16px;
+  max-width: 600px; /* Ограничиваем ширину, чтобы не расползалось на мониторах */
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #a7a7a7;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.hobbies_grid {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap; /* Магия адаптивности: элементы переносятся сами */
+  gap: 10px; /* Расстояние между кнопками */
+  justify-content: flex-start;
+}
+
+.item_option {
+  padding: 10px 16px;
+  background-color: #2C2C2E;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  white-space: nowrap; /* Чтобы слова не переносились внутри кнопки */
+}
+
+/* Эффект при выборе */
+.item_option.active {
+  background-color: #7E46E8; /* Твой фиолетовый */
+  transform: scale(1.05);
+}
+
+.button_wrapper {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}

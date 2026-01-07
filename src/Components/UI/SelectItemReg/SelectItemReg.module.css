@@ -1,0 +1,47 @@
+.wrapper {
+    background-color: #2C2C2E; /* Темно-серый фон как на фото */
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 8px; /* Отступ между элементами */
+}
+
+.wrapper:active {
+    background-color: #3A3A3C; /* Эффект при нажатии */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left; /* Добавьте это свойство */
+    align-items: flex-start; /* И это, чтобы элементы внутри колонки не центрировались */
+    flex: 1; /* Позволит контенту занять все свободное место до стрелочки */
+}
+
+.label {
+    color: #A7A7A7; /* Светло-серый цвет для подписи */
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.value {
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.label, .value {
+    text-align: left; /* Гарантируем выравнивание текста */
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}

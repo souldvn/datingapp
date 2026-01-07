@@ -1,0 +1,5 @@
+.title {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 16px;
+}

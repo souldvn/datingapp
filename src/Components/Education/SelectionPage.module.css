@@ -1,0 +1,72 @@
+.Education {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.options_group {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.reg_inputs_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px; 
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #3A3A3C;
+}
+
+
+.reg_inputs_item:last-child {
+    border-bottom: none;
+}
+
+.radio_input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.radio_custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #A7A7A7;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+.radio_custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #7E46E8;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+
+.radio_input:checked + .radio_custom {
+    border-color: #7E46E8;
+}
+
+.radio_input:checked + .radio_custom::after {
+    opacity: 1;
+}
+
+.reg_inputs_item p {
+    margin: 0;
+    color: #FFFFFF;
+}
