@@ -64,7 +64,7 @@ const AboutYou = () => {
         <NextButton 
           text="Далее" 
           disabled={!isFormValid}
-          onClick={() => navigate('/hobbies')} 
+          onClick={() => navigate('/starttesting')} 
         />
       </div>
     </div>

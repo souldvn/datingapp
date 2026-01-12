@@ -1,26 +1,40 @@
-.button_container {
+.button_container.fixed {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 16px; /* Отступы от краев экрана */
-    box-sizing: border-box;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Мягкий градиент, чтобы кнопка читалась на любом фоне */
-    display: flex;
-    justify-content: center;
+    padding: 16px;
     z-index: 1000;
+}
+
+/* Статичное позиционирование для расположения внутри контента */
+.button_container.static {
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
 }
 
 .next_button {
     width: 100%;
-    padding: 18px 143px;
-    background-color: #7E46E8;
-    color: white;
-    border: none;
+    padding: 18px;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary {
+    background-color: #7E46E8;
+    color: white;
+    border: none;
+}
+
+/* Стиль для кнопки "Пройду позже" */
+.outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #3a3a3c;
 }
 
 .next_button:disabled {

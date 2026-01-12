@@ -7,18 +7,17 @@ import SelectionPage from './Components/Education/SelectionPage'
 import { RegistrationProvider } from './Context/RegistrationContext'
 import Hobbies from './Components/Regisration/Hobbies/Hobbies'
 import AboutYou from './Components/AboutYou/AboutYou'
-
-
+import StartTesting from './Components/Testing/StartTesting'
+import QuizPage from './Components/Testing/QuizPage/QuizPage'
 
 function App() {
 	return (
 		<RegistrationProvider>
 			<BrowserRouter>
 				<div className='App'>
-          
 					<Routes>
 
-
+						/>
 						<Route
 							path='/'
 							element={<Start />}
@@ -32,8 +31,22 @@ function App() {
 							element={<RegStepTwo />}
 						/>
 
-            <Route path='/hobbies' element={<Hobbies />} />
-						<Route path="/about" element={<AboutYou />} />
+						<Route
+							path='/hobbies'
+							element={<Hobbies />}
+						/>
+						<Route
+							path='/about'
+							element={<AboutYou />}
+						/>
+						<Route
+							path='/starttesting'
+							element={<StartTesting />}
+						/>
+																		<Route
+							path='/quiz'
+							element={<QuizPage />}
+						/>
 
 						<Route
 							path='*'
@@ -49,7 +62,10 @@ function App() {
 										'Средняя школа',
 										'Колледж',
 										'Бакалавриат',
-										'Магистратура', 'Аспирантура/Докторантура', 'Самообразование', 'Курсы/Сертификаты'
+										'Магистратура',
+										'Аспирантура/Докторантура',
+										'Самообразование',
+										'Курсы/Сертификаты'
 									]}
 								/>
 							}
@@ -119,11 +135,7 @@ function App() {
 								<SelectionPage
 									title='Алкоголь'
 									field='alcohol'
-									options={[
-										'Пью',
-										'Иногда',
-										'Не пью'
-									]}
+									options={['Пью', 'Иногда', 'Не пью']}
 								/>
 							}
 						/>
@@ -131,7 +143,6 @@ function App() {
 				</div>
 			</BrowserRouter>
 		</RegistrationProvider>
-
 	)
 }
 

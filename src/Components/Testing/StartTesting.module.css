@@ -1,0 +1,47 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Расталкивает контент и кнопки */
+    min-height: 100%;
+    padding-top: 82px;
+    background-color: #121212;
+    box-sizing: border-box;
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    margin-bottom: 16px;
+}
+
+.description {
+
+    margin-bottom: 40px;
+}
+
+.image_container {
+    width: 100%;
+    max-width: 335px; /* Размер изображения из Figma */
+    aspect-ratio: 335 / 230; /* Пропорции картинки из макета */
+    /* border-radius: 12px; */
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    width: 100%;
+}
