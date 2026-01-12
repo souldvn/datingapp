@@ -4,7 +4,7 @@
     justify-content: space-between; /* Расталкивает контент и кнопки */
     min-height: 100%;
     padding-top: 82px;
-    background-color: #121212;
+    /* background-color: #121212; */
     box-sizing: border-box;
 }
 
