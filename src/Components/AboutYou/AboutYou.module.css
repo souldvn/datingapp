@@ -1,0 +1,95 @@
+.container {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1c1c1e; /* Темный фон приложения */
+}
+
+.input_wrapper {
+  margin-top: 40px;
+  position: relative;
+}
+
+.custom_textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px; /* Размер как на макете */
+  line-height: 1.4; /* Межстрочный интервал */
+  resize: none; 
+  padding: 8px 0;
+  outline: none;
+  overflow: hidden; /* Скрываем скроллбар, так как высота растет */
+  display: block;
+  font-family: inherit;
+}
+
+.error_message {
+  color: #ff3b30;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+/* Эффект при фокусе — линия становится ярче или меняет цвет на фиолетовый */
+.custom_textarea:focus {
+  border-bottom: 1px solid #7E46E8; 
+}
+
+/* Стиль плейсхолдера */
+.custom_textarea::placeholder {
+  color: #8e8e93;
+}
+
+.hint {
+  color: #8e8e93;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.button_footer {
+  margin-top: auto; /* Прижимает кнопку к низу */
+  padding-bottom: 34px;
+}
+
+/* ... твои предыдущие стили ... */
+
+.underline {
+  height: 1px;
+  background-color: #3a3a3c;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.underline_error {
+  background-color: #ff3b30;
+  height: 1px; /* На макете линия остается тонкой, но красной */
+}
+
+/* Цвет текста при ошибке */
+.error_text {
+  color: #ff3b30 !important;
+}
+
+.counter {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #8e8e93;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+/* Чтобы textarea не имела своей нижней границы, 
+   раз мы используем отдельный div .underline */
+.custom_textarea {
+  width: 100%;
+  background: transparent;
+  border: none; /* Убираем стандартную границу */
+  color: white;
+  font-size: 20px;
+  resize: none;
+  padding: 8px 0;
+  outline: none;
+}

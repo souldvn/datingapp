@@ -55,7 +55,7 @@ const Hobbies = () => {
         <NextButton
           disabled={!isFormValid}
           text='Далее'
-          onClick={() => navigate('/next-step')} // Замени на нужный путь
+          onClick={() => navigate('/about')} // Замени на нужный путь
         />
       </div>
     </div>

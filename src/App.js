@@ -6,6 +6,7 @@ import './App.css'
 import SelectionPage from './Components/Education/SelectionPage'
 import { RegistrationProvider } from './Context/RegistrationContext'
 import Hobbies from './Components/Regisration/Hobbies/Hobbies'
+import AboutYou from './Components/AboutYou/AboutYou'
 
 
 
@@ -16,6 +17,7 @@ function App() {
 				<div className='App'>
           
 					<Routes>
+
 
 						<Route
 							path='/'
@@ -31,6 +33,7 @@ function App() {
 						/>
 
             <Route path='/hobbies' element={<Hobbies />} />
+						<Route path="/about" element={<AboutYou />} />
 
 						<Route
 							path='*'
@@ -128,6 +131,7 @@ function App() {
 				</div>
 			</BrowserRouter>
 		</RegistrationProvider>
+
 	)
 }
 
