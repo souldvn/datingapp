@@ -1,0 +1,81 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    /* padding: 60px 20px 30px; */
+    /* background-color: #121212; */
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.title {
+    color: white;
+    margin-bottom: 32px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.results_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.result_item {
+    background-color: #2a2a2b;
+    border-radius: 12px;
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, all 0.3s ease;
+    overflow: hidden; /* Важно для скрытия текста */
+}
+
+.item_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* Стили стрелочки и её анимация */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow_up {
+    transform: rotate(180deg);
+}
+
+/* Контейнер для описания */
+.description_container {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.description_container.show {
+    max-height: 200px; /* Достаточно для текста */
+    opacity: 1;
+    margin-top: 16px; /* Отступ от заголовка при раскрытии */
+}
+
+.description_text {
+    text-align: left;
+    color: #FFFFFF;
+    /* font-size: 15px; */
+    /* line-height: 1.4; */
+    opacity: 0.8; /* Чуть приглушенный белый для читаемости */
+}
+
+.item_right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.actions {
+    margin-top: 40px;
+    width: 100%;
+}

@@ -3,10 +3,9 @@
     flex-direction: column;
     justify-content: space-between; /* Расталкивает контент и кнопки */
     min-height: 100%;
-    padding-top: 82px;
+    padding-top: 169px;
     /* background-color: #121212; */
     box-sizing: border-box;
-
 }
 
 .content {
@@ -14,10 +13,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .title {
+    margin-top:24px;
     color: white;
     margin-bottom: 16px;
 }
@@ -29,8 +28,7 @@
 
 .image_container {
     width: 100%;
-    max-width: 335px; /* Размер изображения из Figma */
-    aspect-ratio: 335 / 230; /* Пропорции картинки из макета */
+    /* max-width: 335px;  */
     /* border-radius: 12px; */
     overflow: hidden;
 }

@@ -3,7 +3,6 @@ import { createContext, useState, useContext, useEffect } from 'react';
 const RegistrationContext = createContext();
 
 export const RegistrationProvider = ({ children }) => {
-  // 1. Инициализируем состояние функцией, которая проверяет localStorage
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('registration_data');
     return savedData ? JSON.parse(savedData) : {
@@ -14,11 +13,12 @@ export const RegistrationProvider = ({ children }) => {
       education: '',
       activity: '',
       smoking: '',
-      alcohol: ''
+      alcohol: '',
+      about: '',
+      quizAnswers: {} // Инициализируем объект для ответов теста
     };
   });
 
-  // 2. Используем useEffect, чтобы сохранять данные при любом изменении formData
   useEffect(() => {
     localStorage.setItem('registration_data', JSON.stringify(formData));
   }, [formData]);
@@ -27,7 +27,17 @@ export const RegistrationProvider = ({ children }) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  // Метод для очистки данных (например, после завершения регистрации)
+  // Специальный метод для тестов, чтобы обновлять только конкретный вопрос
+  const updateQuizAnswer = (questionId, answer) => {
+    setFormData(prev => ({
+      ...prev,
+      quizAnswers: {
+        ...prev.quizAnswers,
+        [questionId]: answer
+      }
+    }));
+  };
+
   const clearData = () => {
     localStorage.removeItem('registration_data');
     setFormData({
@@ -38,12 +48,14 @@ export const RegistrationProvider = ({ children }) => {
       education: '',
       activity: '',
       smoking: '',
-      alcohol: ''
+      alcohol: '',
+      about: '',
+      quizAnswers: {}
     });
   };
 
   return (
-    <RegistrationContext.Provider value={{ formData, updateField, clearData }}>
+    <RegistrationContext.Provider value={{ formData, updateField, updateQuizAnswer, clearData }}>
       {children}
     </RegistrationContext.Provider>
   );

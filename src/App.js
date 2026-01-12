@@ -9,6 +9,8 @@ import Hobbies from './Components/Regisration/Hobbies/Hobbies'
 import AboutYou from './Components/AboutYou/AboutYou'
 import StartTesting from './Components/Testing/StartTesting'
 import QuizPage from './Components/Testing/QuizPage/QuizPage'
+import SuccsesTesting from './Components/Testing/SuccsesTesting'
+import SuccsessPage from './Components/Testing/SuccessPage'
 
 function App() {
 	return (
@@ -16,6 +18,8 @@ function App() {
 			<BrowserRouter>
 				<div className='App'>
 					<Routes>
+
+
 
 
 						<Route
@@ -46,6 +50,15 @@ function App() {
 																		<Route
 							path='/quiz'
 							element={<QuizPage />}
+						/>
+																		<Route
+							path='/succses'
+							element={<SuccsesTesting/>}
+						/>
+
+																	<Route
+							path='/summary'
+							element={<SuccsessPage/>}
 						/>
 
 						<Route
